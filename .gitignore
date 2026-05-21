@@ -1,0 +1,18 @@
+# Frontend
+EduTa'lim/node_modules/
+EduTa'lim/dist/
+EduTa'lim/.env
+
+# Backend
+EduTa'lim-api/vendor/
+EduTa'lim-api/.env
+EduTa'lim-api/storage/app/private/
+EduTa'lim-api/storage/logs/
+EduTa'lim-api/storage/framework/cache/
+EduTa'lim-api/storage/framework/sessions/
+EduTa'lim-api/storage/framework/views/
+EduTa'lim-api/bootstrap/cache/
+
+# OS
+.DS_Store
+Thumbs.db
