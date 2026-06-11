@@ -13,6 +13,11 @@ class Lesson extends Model
         'video_url',
         'content',
         'order',
+        'is_free',
+    ];
+
+    protected $casts = [
+        'is_free' => 'boolean',
     ];
 
     public function course(): BelongsTo

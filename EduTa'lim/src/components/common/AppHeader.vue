@@ -16,7 +16,7 @@
             </svg>
           </div>
           <span class="font-bold text-gray-900 text-lg tracking-tight">
-            Edu<span class="text-primary-600">Ta'lim</span>
+            Kasib<span class="text-primary-600">Xunar</span>
           </span>
         </RouterLink>
 
@@ -50,6 +50,13 @@
               Admin panel
             </RouterLink>
             <RouterLink
+              v-else-if="authStore.isTeacher"
+              to="/teacher"
+              class="px-4 py-2 text-sm font-semibold text-emerald-600 hover:bg-emerald-50 rounded-lg transition-colors"
+            >
+              O'qituvchi paneli
+            </RouterLink>
+            <RouterLink
               v-else
               to="/my/courses"
               class="px-4 py-2 text-sm font-semibold text-primary-600 hover:bg-primary-50 rounded-lg transition-colors"
@@ -70,6 +77,9 @@
                 <div v-if="dropOpen" class="absolute right-0 top-full mt-1 w-44 bg-white border border-gray-100 rounded-xl shadow-lg py-1 z-50">
                   <RouterLink to="/my/dashboard" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors" @click="dropOpen = false">
                     Dashboard
+                  </RouterLink>
+                  <RouterLink v-if="authStore.isStudent" to="/my/tasks" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors" @click="dropOpen = false">
+                    Topshiriqlarim
                   </RouterLink>
                   <RouterLink to="/my/profile" class="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 transition-colors" @click="dropOpen = false">
                     Profil

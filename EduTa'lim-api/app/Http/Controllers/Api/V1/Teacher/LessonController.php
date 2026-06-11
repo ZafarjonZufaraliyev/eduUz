@@ -27,6 +27,7 @@ class LessonController extends Controller
             'video_url' => ['nullable', 'url', 'max:500'],
             'content'   => ['nullable', 'string'],
             'order'     => ['sometimes', 'integer', 'min:0'],
+            'is_free'   => ['sometimes', 'boolean'],
         ]);
 
         $validated['course_id'] = $course->id;
@@ -40,26 +41,24 @@ class LessonController extends Controller
         ], 201);
     }
 
-    public function show(Course $course, Lesson $lesson): JsonResponse
+    public function show(Lesson $lesson): JsonResponse
     {
-        $this->ensureBelongsToCourse($course, $lesson);
-
         return response()->json([
             'success' => true,
             'data'    => $lesson,
         ]);
     }
 
-    public function update(Request $request, Course $course, Lesson $lesson): JsonResponse
+    public function update(Request $request, Lesson $lesson): JsonResponse
     {
-        $this->authorizeCourse($request, $course);
-        $this->ensureBelongsToCourse($course, $lesson);
+        $this->authorizeCourse($request, $lesson->course);
 
         $validated = $request->validate([
             'title'     => ['sometimes', 'string', 'max:255'],
             'video_url' => ['nullable', 'url', 'max:500'],
             'content'   => ['nullable', 'string'],
             'order'     => ['sometimes', 'integer', 'min:0'],
+            'is_free'   => ['sometimes', 'boolean'],
         ]);
 
         $lesson->update($validated);
@@ -71,10 +70,9 @@ class LessonController extends Controller
         ]);
     }
 
-    public function destroy(Request $request, Course $course, Lesson $lesson): JsonResponse
+    public function destroy(Request $request, Lesson $lesson): JsonResponse
     {
-        $this->authorizeCourse($request, $course);
-        $this->ensureBelongsToCourse($course, $lesson);
+        $this->authorizeCourse($request, $lesson->course);
 
         $lesson->delete();
 

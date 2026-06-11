@@ -5,11 +5,11 @@
       <div class="text-center mb-8">
         <RouterLink to="/" class="inline-flex items-center gap-2">
           <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center">
-            <span class="text-primary-600 font-bold text-lg">E</span>
+            <span class="text-primary-600 font-bold text-lg">K</span>
           </div>
-          <span class="text-white text-2xl font-bold">EduTa'lim</span>
+          <span class="text-white text-2xl font-bold">KasibXunar</span>
         </RouterLink>
-        <p class="text-primary-200 mt-2 text-sm">Online ta'lim platformasi</p>
+        <p class="text-primary-200 mt-2 text-sm">Kasbiy ko'nikmalar platformasi</p>
       </div>
 
       <!-- Card -->
@@ -19,7 +19,7 @@
 
       <!-- Footer -->
       <p class="text-center text-primary-200 text-xs mt-6">
-        &copy; {{ currentYear }} EduTa'lim. Barcha huquqlar himoyalangan.
+        &copy; {{ currentYear }} KasibXunar. Barcha huquqlar himoyalangan.
       </p>
     </div>
   </div>

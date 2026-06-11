@@ -13,12 +13,12 @@
               </svg>
             </div>
             <span class="font-bold text-white text-lg">
-              Edu<span class="text-primary-400">Ta'lim</span>
+              Kasib<span class="text-primary-400">Xunar</span>
             </span>
           </RouterLink>
 
           <p class="text-sm leading-relaxed max-w-xs">
-            O'zbekistondagi eng yirik online ta'lim platformasi. Professional kurslar orqali karyerangizni yangi bosqichga olib chiqing.
+            O'zbekistondagi eng yirik kasbiy ko'nikmalar platformasi. Professional kurslar orqali kasb-hunaringizni rivojlantiring.
           </p>
 
           <!-- Social links -->
@@ -64,7 +64,7 @@
               <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
               </svg>
-              <span>info@edutalim.uz</span>
+              <span>info@kasibxunar.uz</span>
             </li>
             <li class="flex items-start gap-2.5 text-sm">
               <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,7 +88,7 @@
     <div class="border-t border-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
         <p class="text-xs text-gray-500">
-          &copy; {{ currentYear }} EduTa'lim. Barcha huquqlar himoyalangan.
+          &copy; {{ currentYear }} KasibXunar. Barcha huquqlar himoyalangan.
         </p>
         <div class="flex items-center gap-5 text-xs">
           <RouterLink to="/maxfiylik" class="hover:text-white transition-colors">Maxfiylik siyosati</RouterLink>
@@ -146,8 +146,8 @@ const YoutubeIcon = {
 }
 
 const socials = [
-  { name: 'Telegram',  href: 'https://t.me/edutalim',         icon: TelegramIcon },
-  { name: 'Instagram', href: 'https://instagram.com/edutalim', icon: InstagramIcon },
-  { name: 'YouTube',   href: 'https://youtube.com/@edutalim',  icon: YoutubeIcon },
+  { name: 'Telegram',  href: 'https://t.me/kasibxunar',         icon: TelegramIcon },
+  { name: 'Instagram', href: 'https://instagram.com/kasibxunar', icon: InstagramIcon },
+  { name: 'YouTube',   href: 'https://youtube.com/@kasibxunar',  icon: YoutubeIcon },
 ]
 </script>

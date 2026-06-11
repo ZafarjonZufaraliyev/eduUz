@@ -4,9 +4,9 @@
       <div class="text-center mb-8">
         <RouterLink to="/" class="inline-flex items-center gap-2">
           <div class="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center">
-            <span class="text-white font-black text-lg">E</span>
+            <span class="text-white font-black text-lg">K</span>
           </div>
-          <span class="text-xl font-black text-gray-900">EduTa'lim</span>
+          <span class="text-xl font-black text-gray-900">KasibXunar</span>
         </RouterLink>
         <h1 class="text-2xl font-extrabold text-gray-900 mt-6">Xush kelibsiz!</h1>
         <p class="text-gray-500 text-sm mt-1">Hisobingizga kiring</p>
@@ -49,10 +49,26 @@
           <RouterLink to="/register" class="text-primary-600 font-semibold hover:underline">Ro'yxatdan o'tish</RouterLink>
         </p>
 
-        <!-- Demo hint -->
-        <div class="rounded-xl bg-blue-50 border border-blue-100 p-3 text-xs text-blue-600 space-y-1">
-          <p class="font-semibold">Demo kirish:</p>
-          <p>Admin: admin@edutalim.uz / admin123</p>
+        <!-- Demo credentials -->
+        <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 space-y-2.5">
+          <p class="text-xs font-bold text-slate-500 uppercase tracking-wider">Demo hisoblar</p>
+          <div class="grid grid-cols-5 gap-1.5">
+            <button
+              v-for="acc in demoAccounts"
+              :key="acc.email"
+              type="button"
+              class="flex flex-col items-center gap-1.5 p-2.5 rounded-xl border-2 transition-all text-center hover:-translate-y-0.5"
+              :class="form.email === acc.email
+                ? 'border-primary-500 bg-primary-50'
+                : 'border-slate-200 bg-white hover:border-primary-300'"
+              @click="fillDemo(acc)"
+            >
+              <span class="text-xl">{{ acc.icon }}</span>
+              <span class="text-xs font-bold text-slate-700">{{ acc.label }}</span>
+              <span class="text-[10px] text-slate-400 leading-tight">{{ acc.password }}</span>
+            </button>
+          </div>
+          <p class="text-[11px] text-slate-400 text-center">Bosing — maydonlar avtomatik to'ldiriladi</p>
         </div>
       </div>
     </div>
@@ -71,6 +87,21 @@ const show = ref(false)
 const form = reactive({ email: '', password: '' })
 const errors = reactive({ email: '', password: '' })
 const touched = reactive({ email: false, password: false })
+
+const demoAccounts = [
+  { label: 'Admin',      icon: '🛡️',  email: 'admin@edutalim.uz',   password: 'admin123',   role: 'admin'   },
+  { label: 'Teacher',    icon: '👨‍🏫', email: 'teacher@edutalim.uz', password: 'teacher123', role: 'teacher' },
+  { label: 'Jasur',      icon: '👨‍🏫', email: 'teacher2@edutalim.uz', password: 'teacher123', role: 'teacher' },
+  { label: 'Dilnoza',    icon: '👩‍🏫', email: 'teacher3@edutalim.uz', password: 'teacher123', role: 'teacher' },
+  { label: "O'quvchi",  icon: '🎓',  email: 'student@edutalim.uz', password: 'student123', role: 'student' },
+]
+
+function fillDemo(acc) {
+  form.email    = acc.email
+  form.password = acc.password
+  errors.email    = ''
+  errors.password = ''
+}
 
 function validate(f) {
   if (f === 'email') {
@@ -97,7 +128,7 @@ async function submit() {
   const ok = await authStore.login(form.email, form.password)
   if (ok) {
     if (authStore.isAdmin)        router.push('/admin')
-    else if (authStore.isTeacher) router.push('/courses')
+    else if (authStore.isTeacher) router.push('/teacher')
     else                          router.push('/my/courses')
   }
 }

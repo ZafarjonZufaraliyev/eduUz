@@ -14,7 +14,7 @@ class CourseController extends Controller
 {
     public function index(): JsonResponse
     {
-        $courses = Course::with(['category', 'teacher'])->get();
+        $courses = Course::with(['category', 'teacher', 'lessons'])->get();
 
         return response()->json([
             'success' => true,

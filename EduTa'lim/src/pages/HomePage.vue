@@ -26,13 +26,13 @@
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
                 <span class="relative inline-flex rounded-full h-2 w-2 bg-primary-400" />
               </span>
-              O'zbekistoning №1 IT ta'lim platformasi
+              O'zbekistoning №1 kasbiy ko'nikmalar platformasi
             </div>
 
             <!-- Headline -->
             <div class="space-y-3">
               <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.05] tracking-tight">
-                Dasturlashni
+                Kasb-hunar
               </h1>
               <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black leading-[1.05] tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-blue-400 to-indigo-400">
                 o'rganing
@@ -40,7 +40,7 @@
             </div>
 
             <p class="text-lg sm:text-xl text-slate-400 leading-relaxed max-w-md">
-              Professional murabbiylardan amaliy bilim oling. Kursni tugatib, IT sohasida yuksaling.
+              Professional murabbiylardan amaliy bilim oling. Kasbingizni rivojlantiring va karyerangizni yuksaltiring.
             </p>
 
             <!-- CTA buttons -->
@@ -536,7 +536,7 @@ import imgDocker from '@/assets/docker.png'
 
 // ── Typing animation ──────────────────────────────────────────────────────────
 const heroText = ref('')
-const fullText = "Dasturlashni o'rganing"
+const fullText = "Kasb-hunar o'rganing"
 let charIndex = 0
 let typingTimer = null
 
@@ -619,6 +619,18 @@ const trustBadges = [
 
 const categories = [
   {
+    slug: 'kasib-xunar',
+    name: 'Kasib Xunar',
+    emoji: '🔧',
+    desc: "Elektrik, santexnik, qurilish, tikuvchilik va boshqa amaliy kasblar",
+    count: 32,
+    iconBg: 'bg-amber-50',
+    gradientBg: 'bg-gradient-to-br from-amber-50/80 to-transparent',
+    textColor: 'text-amber-600',
+    arrowBg: 'bg-amber-50',
+    arrowColor: 'text-amber-500',
+  },
+  {
     slug: 'frontend',
     name: 'Frontend',
     emoji: '🌐',
@@ -641,18 +653,6 @@ const categories = [
     textColor: 'text-slate-700',
     arrowBg: 'bg-slate-50',
     arrowColor: 'text-slate-500',
-  },
-  {
-    slug: 'devops',
-    name: 'DevOps',
-    emoji: '🚀',
-    desc: 'Docker, Kubernetes, CI/CD, AWS va cloud arxitektura',
-    count: 14,
-    iconBg: 'bg-orange-50',
-    gradientBg: 'bg-gradient-to-br from-orange-50/80 to-transparent',
-    textColor: 'text-orange-600',
-    arrowBg: 'bg-orange-50',
-    arrowColor: 'text-orange-500',
   },
   {
     slug: 'mobile',

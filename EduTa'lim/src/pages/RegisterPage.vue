@@ -4,9 +4,9 @@
       <div class="text-center mb-8">
         <RouterLink to="/" class="inline-flex items-center gap-2">
           <div class="w-10 h-10 bg-primary-600 rounded-xl flex items-center justify-center">
-            <span class="text-white font-black text-lg">E</span>
+            <span class="text-white font-black text-lg">K</span>
           </div>
-          <span class="text-xl font-black text-gray-900">EduTa'lim</span>
+          <span class="text-xl font-black text-gray-900">KasibXunar</span>
         </RouterLink>
         <h1 class="text-2xl font-extrabold text-gray-900 mt-6">Hisob yaratish</h1>
         <p class="text-gray-500 text-sm mt-1">Bepul ro'yxatdan o'ting</p>

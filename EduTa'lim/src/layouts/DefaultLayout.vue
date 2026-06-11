@@ -11,9 +11,9 @@
       <!-- Logo -->
       <div class="flex items-center gap-3 px-6 py-5 border-b border-gray-100">
         <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-          <span class="text-white font-bold text-sm">E</span>
+          <span class="text-white font-bold text-sm">K</span>
         </div>
-        <span class="font-bold text-gray-900 text-lg">EduTa'lim</span>
+        <span class="font-bold text-gray-900 text-lg">KasibXunar</span>
       </div>
 
       <!-- Nav -->

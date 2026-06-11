@@ -7,7 +7,7 @@
           Biz haqimizda
         </h1>
         <p class="text-lg text-primary-200 leading-relaxed">
-          EduTa'lim — O'zbekistondagi eng zamonaviy va qulayliklar bilan to'ldirilgan online ta'lim platformasi.
+          KasibXunar — O'zbekistondagi eng zamonaviy va qulayliklar bilan to'ldirilgan online ta'lim platformasi.
           Bizning maqsadimiz — sifatli ta'limni hamma uchun qulay va arzon qilish.
         </p>
       </div>
@@ -23,7 +23,7 @@
               Ta'limni demokratlashtirish — hammaga teng imkoniyat
             </h2>
             <div class="space-y-4 text-gray-600 leading-relaxed">
-              <p>2020-yilda tashkil etilgan EduTa'lim platformasi bugun 50 000+ faol talabaga xizmat ko'rsatmoqda. Biz o'zbek tilidagi sifatli IT ta'limini qulay va arzon qilishni maqsad qilganmiz.</p>
+              <p>2020-yilda tashkil etilgan KasibXunar platformasi bugun 50 000+ faol talabaga xizmat ko'rsatmoqda. Biz o'zbek tilidagi sifatli kasbiy ko'nikmalar ta'limini qulay va arzon qilishni maqsad qilganmiz.</p>
               <p>Platforma orqali siz sertifikat olib, karyerangizni yangi bosqichga ko'tarishingiz yoki o'z biznesingizni rivojlantirishingiz mumkin.</p>
             </div>
           </div>
